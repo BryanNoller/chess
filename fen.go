@@ -115,7 +115,7 @@ func formEnPassant(enPassant string) (Square, error) {
 	if enPassant == "-" {
 		return NoSquare, nil
 	}
-	sq := strToSquareMap[enPassant]
+	sq := StrToSquareMap[enPassant]
 	if sq == NoSquare || !(sq.Rank() == Rank3 || sq.Rank() == Rank6) {
 		return NoSquare, fmt.Errorf("chess: fen invalid En Passant square %s", enPassant)
 	}

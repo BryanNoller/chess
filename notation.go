@@ -50,11 +50,11 @@ func (_ LongAlgebraicNotation) Decode(pos *Position, s string) (*Move, error) {
 	if l < 4 || l > 5 {
 		return nil, err
 	}
-	s1, ok := strToSquareMap[s[0:2]]
+	s1, ok := StrToSquareMap[s[0:2]]
 	if !ok {
 		return nil, err
 	}
-	s2, ok := strToSquareMap[s[2:4]]
+	s2, ok := StrToSquareMap[s[2:4]]
 	if !ok {
 		return nil, err
 	}

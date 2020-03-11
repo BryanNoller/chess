@@ -142,8 +142,17 @@ func (f File) String() string {
 	return fileChars[f : f+1]
 }
 
+func StrToSquare(squareStr string) (square Square) {
+	if sq, ok := StrToSquareMap[squareStr]; ok {
+		square = sq
+	} else {
+		square = NoSquare
+	}
+	return square
+}
+
 var (
-	strToSquareMap = map[string]Square{
+	StrToSquareMap = map[string]Square{
 		"a1": A1, "a2": A2, "a3": A3, "a4": A4, "a5": A5, "a6": A6, "a7": A7, "a8": A8,
 		"b1": B1, "b2": B2, "b3": B3, "b4": B4, "b5": B5, "b6": B6, "b7": B7, "b8": B8,
 		"c1": C1, "c2": C2, "c3": C3, "c4": C4, "c5": C5, "c6": C6, "c7": C7, "c8": C8,
