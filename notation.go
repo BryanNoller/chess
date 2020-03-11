@@ -156,7 +156,7 @@ func formS1(pos *Position, m *Move) string {
 			req = true
 
 			if mv.s1.File() == m.s1.File() {
-				rankReq = true;
+				rankReq = true
 			}
 
 			if mv.s1.Rank() == m.s1.Rank() {
